@@ -1,7 +1,4 @@
 <?php
-include $_SERVER['DOCUMENT_ROOT'] . '/securimage/securimage.php';
-?>
-<?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
 	$first_name				= mysqli_real_escape_string($conn,$_POST['first_name']);
@@ -33,18 +30,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 		$pareigos	= $_POST['pareigos'];
 	}
 	
-	/* Prasideda Simple Captcha */ 
-		$securimage = new Securimage();	
-		
-	if ($securimage->check($_POST['captcha_code']) == false) {
-  // the code was incorrect
-  // you should handle the error so that the form processor doesn't continue
-
-  // or you can use the following code if there is no validation or you do not know how
-  echo "Apsaugos kodas neteisingas.<br /><br />";
-  echo "Grižkite <a href='javascript:history.go(-1)'>atgal</a> ir bandykite vėl.";
-  exit;
-}	
 	
 	if (!empty($errors)) {
 		foreach ($errors as $error) {
