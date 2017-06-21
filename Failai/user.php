@@ -50,11 +50,7 @@ include_once "user_inc.php";
 							</select> 
 							</div>
 							</div>
-				
-<!--Simple Captcha -->
-<img id="captcha" src="securimage/securimage/securimage_show.php"/>
-<input type="text" name="captcha_code" size="10" maxlength="6" /> <!-- dydis ir elementų skaičius -->
-<a href="#" onclick="document.getElementById('captcha').src = 'securimage/securimage/securimage_show.php?' + Math.random(); return false" class="btn btn-success"> Sekantis kodas</a>
+			
 			<hr class="colorgraph">
 				<div class="row">
 					<div class="col-xs-12 col-md-6"><input type="submit" name="submit" value="Įvesti duomenis" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
